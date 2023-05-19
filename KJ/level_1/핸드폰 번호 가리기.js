@@ -1,10 +1,8 @@
-// 핸드폰 번호 가리기
 // 문자열과 정규표현식을 이용
-
 function solution(phoneNumber) {
-  // return phoneNumber.replace(/\d(?=\d{4})/g, '*');
+	// return phoneNumber.replace(/\d(?=\d{4})/g, '*');
 
-  return '*'.repeat(phoneNumber.length - 4) + phoneNumber.slice(-4);
+	return '*'.repeat(phoneNumber.length - 4) + phoneNumber.slice(-4);
 }
 
 console.log(solution('01033334444'));

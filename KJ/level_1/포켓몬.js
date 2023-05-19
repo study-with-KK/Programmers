@@ -1,10 +1,8 @@
-// 포켓몬
-
 function solution(nums) {
-  const N = nums.length / 2;
-  const answer = [...new Set(nums)];
+	const N = nums.length / 2;
+	const answer = [...new Set(nums)];
 
-  return answer.length < N ? answer.length : N;
+	return answer.length < N ? answer.length : N;
 }
 
 console.log(solution([3, 1, 2, 3]));
