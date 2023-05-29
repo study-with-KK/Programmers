@@ -1,16 +1,6 @@
-function solution(n) {
-	const answer = [];
-
-	for (let i = 0; i * i <= n; i++) {
-		if (n % i === 0) {
-			answer.push(i);
-
-			if (i !== n / i) answer.push(n / i);
-		}
-	}
-
-	return answer.reduce((acc, cur) => acc + cur, 0);
+function solution(absolutes, signs) {
+	return absolutes.reduce((acc, cur, i) => (signs[i] ? acc + cur : acc - cur), 0);
 }
 
-console.log(solution(12));
-console.log(solution(5));
+console.log(solution([4, 7, 12], [true, false, true]));
+console.log(solution([1, 2, 3], [false, false, true]));
